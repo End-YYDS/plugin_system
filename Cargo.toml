@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = ["libs/plugin_interface", "plugins/example_plugin"]
+[package]
+name = "plugin_system"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace.dependencies]
+plugin_interface = { path = "libs/plugin_interface" }
+
+[dependencies]
+libloading = "0.8.5"
+serde = { version = "1.0.208", features = ["derive"] }
+serde_json = "1.0.125"
+zip = "2.1.6"
+plugin_interface = { workspace = true }
+notify = "6.1.1"
+
+[dev-dependencies]
+cargo-make = "0.37.15"
