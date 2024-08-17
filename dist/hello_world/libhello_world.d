@@ -1,0 +1,1 @@
+/Users/derrick/Documents/Program/rust/plugin_system/target/aarch64-apple-darwin/release/libhello_world.dylib: /Users/derrick/Documents/Program/rust/plugin_system/libs/plugin_interface/src/lib.rs /Users/derrick/Documents/Program/rust/plugin_system/plugins/hello_world/src/lib.rs

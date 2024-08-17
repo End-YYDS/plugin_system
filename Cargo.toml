@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["libs/plugin_interface", "plugins/example_plugin"]
+members = ["libs/plugin_interface", "plugins/example_plugin", "plugins/hello_world"]
 [package]
 name = "plugin_system"
 version = "0.1.0"
@@ -17,6 +17,14 @@ serde_json = "1.0.125"
 zip = "2.1.6"
 plugin_interface = { workspace = true }
 notify = "6.1.1"
+ctrlc = "3.4.5"
 
 [dev-dependencies]
 cargo-make = "0.37.15"
+
+[target.x86_64-unknown-linux-musl] # 也支持[build]节点 设置target=...
+linker = "x86_64-linux-musl-gcc"
+[target.x86_64-unknown-linux-gnu]
+linker = "x86_64-unknown-linux-gnu-gcc"
+[target.x86_64-pc-windows-gnu]
+linker = "x86_64-w64-mingw32-gcc"
